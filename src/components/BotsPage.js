@@ -13,29 +13,7 @@ function BotsPage() {
     .then(data => setBots(data))
   }, [])
 
-  // function addToArmy(id) {
-  //   const newArmyBot = bots.filter((bot) => bot.id === id);
-  //   console.log(newArmyBot);
-  //   const updatedArmyBots = [...armyBots, newArmyBot]
-  //   setArmyBots(updatedArmyBots);
-  // }
-  // console.log("BOTS", bots)
-  // console.log("ARMY BOTS", armyBots)
-
-  // function addToArmy(id) {
-  //   setArmyBots(
-  //   bots.map((bot) => 
-  //   bot.id === id ? {...bot, armyBot: true} : bot
-  //   )
-  //   );
-  // }
-
-  // function removeFromArmy(id) {
-  //   setArmyBots(
-  //     bots.map((bot) => 
-  //     bot.id === id ? {...bot, armyBot: false} : bot)
-  //   );
-  // }
+  
   function toggleArmyStatus(id) {
     setArmyStatus(!armyStatus);
     setArmyBots(bots.map((bot) => bot.id === id ? {...bot, armyBot: armyStatus} : bot))
